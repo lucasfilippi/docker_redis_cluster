@@ -1,4 +1,4 @@
-FROM redis:3.2
+FROM redis:latest
 
 MAINTAINER Tommy Chen <tommy351@gmail.com>
 
@@ -7,7 +7,7 @@ RUN apt-get -y update && \
   rm -rf /var/lib/apt/lists/* && \
   gem install redis
 
-RUN wget https://raw.githubusercontent.com/antirez/redis/3.2/src/redis-trib.rb -O /redis-trib.rb && \
+RUN wget https://raw.githubusercontent.com/antirez/redis/3.2.9/src/redis-trib.rb -O /redis-trib.rb && \
   chmod +x /redis-trib.rb
 
 COPY start.sh /
