@@ -14,7 +14,7 @@ COPY redis.conf /
 
 VOLUME /data
 WORKDIR /
-
+RUN chmod +x ./start.sh
 EXPOSE 7000 7001 7002 7003 7004 7005
 
 CMD ["./start.sh"]
